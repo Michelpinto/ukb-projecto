@@ -1,7 +1,11 @@
+import Nav from './components/nav/Nav';
+import Routing from './routes/Routes';
+
 function App() {
   return (
     <main>
-      <h1>hello world</h1>
+      <Nav />
+      <Routing />
     </main>
   );
 }
