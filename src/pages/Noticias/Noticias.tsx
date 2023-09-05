@@ -1,9 +1,15 @@
 import React from 'react';
 
-// import { Container } from './styles';
+import { Div, Main } from './noticiasStyles';
 
 const Noticias: React.FC = () => {
-  return <div>Noticias page</div>;
+  return (
+    <Main>
+      <Div>
+        <h1>Noticias</h1>
+      </Div>
+    </Main>
+  );
 };
 
 export default Noticias;

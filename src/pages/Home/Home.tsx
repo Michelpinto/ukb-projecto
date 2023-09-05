@@ -1,9 +1,15 @@
 import React from 'react';
 
-// import { Container } from './styles';
+import { Div, Main } from './homeStyles';
 
 const Home: React.FC = () => {
-  return <div>Home page</div>;
+  return (
+    <Main>
+      <Div>
+        <h1>Home</h1>
+      </Div>
+    </Main>
+  );
 };
 
 export default Home;

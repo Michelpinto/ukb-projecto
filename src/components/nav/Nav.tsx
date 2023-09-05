@@ -1,16 +1,21 @@
 import React from 'react';
 
 import { Main, Container } from './navStyles';
+import { Link } from 'react-router-dom';
 
 const Nav: React.FC = () => {
   return (
     <Main>
       <Container>
         <ul>
-          <li>Home</li>
+          <li>
+            <Link to='/'>Home</Link>
+          </li>
           <li>Graduação</li>
           <li>Pós-Graduação</li>
-          <li>Noticías</li>
+          <li>
+            <Link to='/noticias'>Noticías</Link>
+          </li>
           <li>Eventos</li>
           <button>Candidatura</button>
         </ul>
