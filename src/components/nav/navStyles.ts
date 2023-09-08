@@ -8,14 +8,17 @@ export const Container = styled.nav`
   padding: 2rem 0;
   margin: auto;
   max-width: 1200px;
+  display: flex;
+  align-items: center;
 
   & ul {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 6rem;
     width: 100%;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-weight: 400;
+    justify-content: flex-end;
   }
 
   & li {
@@ -30,5 +33,6 @@ export const Container = styled.nav`
     font-size: 1.6rem;
     font-weight: 400;
     cursor: pointer;
+    margin-left: 6rem;
   }
 `;

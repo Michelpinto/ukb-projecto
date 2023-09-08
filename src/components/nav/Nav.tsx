@@ -17,8 +17,8 @@ const Nav: React.FC = () => {
             <Link to='/noticias'>Noticías</Link>
           </li>
           <li>Eventos</li>
-          <button>Candidatura</button>
         </ul>
+        <button>Candidatura</button>
       </Container>
     </Main>
   );
