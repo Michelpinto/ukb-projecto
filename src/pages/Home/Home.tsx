@@ -1,14 +1,13 @@
 import React from 'react';
-
-import { Div, Main } from './homeStyles';
+import Hero from '../../features/Home/Hero/Hero';
+import Noticias from '../../features/Home/Noticias/Noticias';
 
 const Home: React.FC = () => {
   return (
-    <Main>
-      <Div>
-        <h1>Home</h1>
-      </Div>
-    </Main>
+    <>
+      <Hero />
+      <Noticias />
+    </>
   );
 };
 
