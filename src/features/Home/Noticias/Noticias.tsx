@@ -6,6 +6,10 @@ const Noticias: React.FC = () => {
   return (
     <main>
       <h1>Noticias</h1>
+
+      <section>
+        <div></div>
+      </section>
     </main>
   );
 };
