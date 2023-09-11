@@ -23,7 +23,6 @@ export const Section = styled.section`
   width: 100%;
   height: 100vh;
   overflow: hidden;
-
   & div {
     position: absolute;
     top: 0;
