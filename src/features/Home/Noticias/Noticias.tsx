@@ -1,16 +1,15 @@
 import React from 'react';
-
-// import { Container } from './styles';
+import { Main } from './noticias-styles';
 
 const Noticias: React.FC = () => {
   return (
-    <main>
+    <Main>
       <h1>Noticias</h1>
 
       <section>
         <div></div>
       </section>
-    </main>
+    </Main>
   );
 };
 
