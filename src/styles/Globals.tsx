@@ -1,5 +1,7 @@
 import React from 'react';
-import { createGlobalStyle } from 'styled-components';
+import { ThemeProvider, createGlobalStyle } from 'styled-components';
+import colors from './colors';
+import { devices } from './devices';
 
 interface IProps {
   children: React.ReactNode;
@@ -34,16 +36,22 @@ a {
 li {
     list-style: none;
 }
-
-
+button {
+  cursor: pointer;
+}
 `;
+
+const theme={
+  colors:colors,
+  devices:devices
+}
 
 const Layout: React.FC<IProps> = ({ children }) => {
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <GlobalStyle />
       {children}
-    </>
+    </ThemeProvider>
   );
 };
 
