@@ -11,7 +11,10 @@ export const Container = styled.div`
 export const GridWrapper = styled.div`
   display: grid;
   padding-left: 1rem;
+  padding-right:2rem;
   max-width: 120rem;
+  height:540px;
+  overflow: auto;
   grid-template-columns: repeat(2, auto);
   grid-gap: 1.2rem;
 `;

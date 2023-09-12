@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { News, NewsProps } from '../../../components/news/news';
 import { Container, GridWrapper, NewsHeader, NewsWrapper, PrimaryNewsWrapper, SectionWrapper } from './noticias-styles';
+
 
 
 const news:NewsProps["item"][]=[{
@@ -37,15 +38,31 @@ const news:NewsProps["item"][]=[{
   title:"Where can I get some?",
   created_at:"10-09-2023",
   content:"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc."
+},
+{
+  title:"Where can I get some?",
+  created_at:"10-09-2023",
+  content:"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc."
+},
+{
+  title:"Where can I get some?",
+  created_at:"10-09-2023",
+  content:"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc."
+}
+,{
+  title:"Where can I get some?",
+  created_at:"10-09-2023",
+  content:"There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc."
 }]
 const Noticias: React.FC = () => {
+  const [show_more, setShowMore]=useState(false)
+  const newsFiltered=show_more?news.slice(1,news.length):news.slice(1,7)
   return (
-
       <SectionWrapper>
         <Container>
         <NewsHeader>
         <h1>Noticias</h1>
-        <button>Ver mais</button>
+        <button onClick={()=>setShowMore(!show_more)}>Ver {show_more?"menos":"mais"}</button>
         </NewsHeader>
         
         <NewsWrapper>
@@ -54,7 +71,7 @@ const Noticias: React.FC = () => {
           </PrimaryNewsWrapper>
           <GridWrapper>
             {
-              news.slice(1,7).map((item,index)=><News key={index} item={item}/>)
+              newsFiltered.map((item,index)=><News key={index} item={item}/>)
             } 
           </GridWrapper>
           
