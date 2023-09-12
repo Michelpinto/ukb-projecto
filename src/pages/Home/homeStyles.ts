@@ -1,7 +1,3 @@
 import styled from 'styled-components';
 
-export const Main = styled.main`
-  display: flex;
-  flex-direction: column;
-  gap: 8rem;
-`;
+export const Main = styled.main``;
