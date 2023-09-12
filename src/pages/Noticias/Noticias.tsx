@@ -1,14 +1,14 @@
 import React from 'react';
 
-import { Div, Main } from './noticiasStyles';
+import { Div, Container } from './noticiasStyles';
 
 const Noticias: React.FC = () => {
   return (
-    <Main>
+    <Container>
       <Div>
         <h1>Noticias</h1>
       </Div>
-    </Main>
+    </Container>
   );
 };
 
