@@ -1,14 +1,12 @@
 import styled from 'styled-components';
 
+
 export const Container = styled.div`
   display: flex;
   height:100%;
   flex-direction: column;
   max-width:1024px;
-  justify-content:center;
-
-  
-`;
+  justify-content:center;`
 
 export const GridWrapper=styled.div`
   display: grid;
