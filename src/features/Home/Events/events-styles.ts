@@ -1,14 +1,71 @@
 import styled from "styled-components";
 
 
+const EventsWrapper = styled.div`
+  display: flex;
+  flex-direction:column;
+  max-width: 120rem;
+  
+  justify-content: center;
+  align-items: center;
+`;
+const EventsHeader = styled.div`
+  display: flex;
+  width: 100%;
+  height: 5rem;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+`;
+const EventsFooter = styled.div`
+  display: flex;
+  width: 100%;
+  height: 3rem;
+  justify-content: center;
+  align-items: center;
+`;
+
+const SectionWrapper = styled.section`
+  display: flex;
+  position: relative;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+
 const EventsContent=styled.div`
   justify-content:center;
   align-items: center;
-  margin-top:1.75rem;
+  padding-top:3rem;
+  padding-bottom:5rem;
   width:100%;
+  height:680px;
+  overflow: auto;
+  
+  display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+
   padding-left:2rem;
   padding-right:2rem;
-  @media ${props=>props.theme.devices.mobileS} {
+ 
+`
+
+export {
+  EventsContent,
+  EventsWrapper,
+  EventsHeader,
+  SectionWrapper,
+  EventsFooter 
+
+}
+
+/*
+
+
+ @media ${props=>props.theme.devices.mobileS} {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;   
@@ -45,9 +102,4 @@ const EventsContent=styled.div`
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     width:auto;  
-  };
-`
-
-export {
-  EventsContent
-}
+  };*/

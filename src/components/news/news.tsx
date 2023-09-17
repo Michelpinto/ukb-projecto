@@ -14,7 +14,6 @@ export type NewsProps={
         title:string
 }}
 export function News({item}:NewsProps){
-    console.log(item)
     return (
         <NewsWrapper>
             <NewsFirstSection>
