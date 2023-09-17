@@ -2,13 +2,12 @@ import styled from 'styled-components';
 
 export const Main = styled.main`
   margin-top: 4rem;
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
+  gap: 1.6rem;
 
   & h1 {
     font-size: 2rem;
-    text-align: center;
+    max-width: 98rem;
+    margin: 0 auto;
   }
 
   & section {
