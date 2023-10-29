@@ -1,17 +1,21 @@
 import React, { useState } from 'react';
 
-import { Main, P, Section, Ul } from './cursosStyles';
+import { Main, Curso, Section, Ul, UL2 } from './cursosStyles';
 
 const curso1 = {
-  text: 'Curso 1 ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam',
+  text: 'Licenciatura em Ciências da Computação',
 };
 
 const curso2 = {
-  text: 'Curso 2 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae',
+  text: 'Licenciatura em engenharia mecânica',
 };
 
 const curso3 = {
-  text: 'Curso 3 in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia de',
+  text: 'Licenciatura em eng. de gestão logística e dos transportes',
+};
+
+const curso4 = {
+  text: 'Mestrado em engenharia informática',
 };
 
 const Cursos: React.FC = () => {
@@ -27,26 +31,29 @@ const Cursos: React.FC = () => {
             className={curso === 1 ? 'active' : ''}
             onClick={() => setCurso(1)}
           >
-            Curso numero 1
+            Graduação
           </li>
           <li
             className={curso === 2 ? 'active' : ''}
             onClick={() => setCurso(2)}
           >
-            Curso numero 2
-          </li>
-          <li
-            className={curso === 3 ? 'active' : ''}
-            onClick={() => setCurso(3)}
-          >
-            Curso numero 3
+            Pós-graduação
           </li>
         </Ul>
 
         <aside>
-          {curso === 1 && <P>{curso1.text}</P>}
-          {curso === 2 && <P>{curso2.text}</P>}
-          {curso === 3 && <P>{curso3.text}</P>}
+          {curso === 1 && (
+            <UL2>
+              <Curso>{curso1.text}</Curso>
+              <Curso>{curso2.text}</Curso>
+              <Curso>{curso3.text}</Curso>
+            </UL2>
+          )}
+          {curso === 2 && (
+            <UL2>
+              <Curso>{curso4.text}</Curso>
+            </UL2>
+          )}
         </aside>
       </Section>
     </Main>
