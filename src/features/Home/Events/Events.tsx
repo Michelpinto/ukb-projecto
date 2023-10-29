@@ -1,12 +1,12 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 
 import { 
      EventsHeader,
      EventsWrapper,
      SectionWrapper,
      EventsContent,
-     EventsFooter
+  
      } from './events-styles';
 import { IEvent,EventCard } from '../../../components/events';
 import url_img from "../../../assets/eventImg.png"
@@ -97,8 +97,8 @@ const events:IEvent["event"][]=[{
   id:"id11"
 }]
 const Events: React.FC = () => {
-  const [show_more, setShowMore]=useState(false)
-  const eventsFiltered=show_more?events.slice(0,events.length):events.slice(0,9)
+
+  const eventsFiltered=events
   return (
       <SectionWrapper>
          <EventsWrapper>
@@ -108,13 +108,8 @@ const Events: React.FC = () => {
           <EventsContent>
             {
               eventsFiltered.map((event,index)=><EventCard key={index} event={event}/>)
-            } 
-           
-          </EventsContent>
-          <EventsFooter>
-          <button onClick={()=>setShowMore(!show_more)}>Ver {show_more?"menos":"mais"}</button>
-            </EventsFooter >
-          
+            }
+          </EventsContent> 
         </EventsWrapper>
       </SectionWrapper>
   );
