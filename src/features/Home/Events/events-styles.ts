@@ -58,7 +58,7 @@ const EventsContent=styled.div`
     gap: 1rem;
 
   padding-left:2rem;
-  padding-right:2rem;
+ padding-right:2rem;
    
  
 `

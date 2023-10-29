@@ -6,6 +6,7 @@ export const Container = styled.div`
   flex-direction: column;
   max-width: 120rem;
   height: 67rem;
+  
   justify-content: center;
 `;
 
@@ -23,6 +24,8 @@ export const NewsWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-left:2.5rem;
+ padding-right:2.5rem;
 `;
 export const NewsHeader = styled.div`
   display: flex;

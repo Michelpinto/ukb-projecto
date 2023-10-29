@@ -77,11 +77,11 @@ const Noticias: React.FC = () => {
         
         <NewsWrapper>
           <PrimaryNewsWrapper>
-            <News item={news[0]}/>
+            <News first={true} item={news[0]}/>
           </PrimaryNewsWrapper>
           <GridWrapper>
             {
-              newsFiltered.map((item,index)=><News key={index} item={item}/>)
+              newsFiltered.map((item,index)=><News first={false} key={index} item={item}/>)
             } 
           </GridWrapper>
           
