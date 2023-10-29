@@ -11,7 +11,8 @@ export type NewsProps={
     item:{
         created_at:string,
         content:string,
-        title:string
+        title:string,
+        url_img:string
 }}
 export function News({item}:NewsProps){
     return (

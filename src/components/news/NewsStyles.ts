@@ -1,5 +1,6 @@
 import { styled } from 'styled-components';
 
+
 const NewsWrapper = styled.div`
   display: flex;
   flex-direction:column;
@@ -8,7 +9,7 @@ const NewsWrapper = styled.div`
   height: 180px;
   width: 320px;
   padding:1.5rem;
-  background: ${props => props.theme.colors.background_primary};  
+  background-color: ${props => props.theme.colors.background_primary};  
 `;
 const NewsFirstSection = styled.div`
   display: flex;
