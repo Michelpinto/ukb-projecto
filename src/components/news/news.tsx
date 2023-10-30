@@ -5,7 +5,9 @@ import {
     NewsTitle,
     NewsCreatedAt,
     NewsFirstSection,
-    NewsSecondSection
+    NewsSecondSection,
+    Container,
+    ImageContainer
  } from "./NewsStyles"
 
 export type NewsProps={
@@ -34,17 +36,24 @@ export function News({item,first}:NewsProps){
     }
 
     return (
-        <NewsWrapper url_img ={item.url_img}>
-            <NewsFirstSection>
+        <Container>
+        <ImageContainer src={item.url_img}/>
+        <NewsWrapper>
+        <NewsFirstSection>
                 <NewsTitle>{item.title}</NewsTitle>
                 <NewsCreatedAt>{item.created_at}</NewsCreatedAt>
             </NewsFirstSection>
             <NewsSecondSection>
                 <NewsTextContent>{
-                item.content.length>255?`${item.content.slice(0,120)}...`:item.content
+                item.content.length>255?`${item.content.slice(0,80)}...`:item.content
                 }</NewsTextContent>
             </NewsSecondSection>
-           
         </NewsWrapper>
+       
+        </Container>
     )
 }
+
+/*
+ 
+*/

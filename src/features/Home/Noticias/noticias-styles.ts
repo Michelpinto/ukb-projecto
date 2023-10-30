@@ -51,6 +51,29 @@ export const PrimaryNewsWrapper = styled.div`
   border-radius: 0.6rem;
   background: ${(props) => props.theme.colors.background_primary};
 `;
+
+export const ImageContainer=styled.img`
+  display: flex;
+  height: 100%;
+  width: 340px;
+  position:relative;
+  align-items:center;
+  border-radius:6px;
+  
+`
+export const PrimaryNewsWrappeImage = styled.div`
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  border-radius:6px;
+  height: 180px;
+  width: 320px;
+  padding:1.5rem;
+  opacity: 0.79;
+  background: ${(props) => props.theme.colors.background_info_news};
+  box-shadow: 0.063rem 0.25rem 0.938rem rgba(0, 0, 0, 0.22);
+  
+`;
 export const SectionWrapper = styled.section`
   display: flex;
   position: relative;
