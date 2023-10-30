@@ -8,6 +8,7 @@ export const Main = styled.main`
     font-size: 2rem;
     max-width: 98rem;
     margin: 0 auto;
+    text-align: center;
   }
 
   & section {

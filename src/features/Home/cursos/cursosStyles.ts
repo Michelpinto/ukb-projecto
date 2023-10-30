@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Main = styled.main`
   margin: 0 auto;
-  max-width: 98rem;
+  max-width: 120rem;
   padding: 8rem 0;
 
   & h1 {
@@ -42,6 +42,8 @@ export const Ul = styled.ul`
 
 export const P = styled.p`
   font-size: 1.4rem;
+  margin: 1rem 0;
+  line-height: 1.4;
 `;
 
 export const H2 = styled.h2`
