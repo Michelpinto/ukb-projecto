@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+import landscape1 from '../../../assets/landscapeOne.jpg';
+import landscape2 from '../../../assets/landscapeTwo.jpg';
+import landscape3 from '../../../assets/landscapeThree.jpg';
 
-import { Main, Curso, Section, Ul, UL2, P } from './cursosStyles';
+import { Main, Nav, Section, Section2 } from './cursosStyles';
 
 const curso1 = {
   text: 'Licenciatura em Ciências da Computação',
@@ -28,54 +31,128 @@ const curso4 = {
 
 const Cursos: React.FC = () => {
   const [curso, setCurso] = useState(1);
-  const [showSobre, setShowSobre] = useState('');
+
+  const showCurso1 = () => {
+    return (
+      curso === 1 && (
+        <>
+          <div>
+            <h2>100+</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            <h2>100+</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            <h3>Lorem ipsum</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+          </div>
+          <aside>
+            <img src={landscape1} alt='image' />
+            <p>{curso1.text}</p>
+          </aside>
+        </>
+      )
+    );
+  };
+
+  const showCurso2 = () => {
+    return (
+      curso === 2 && (
+        <>
+          <div>
+            <h2>200+</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            <h2>200+</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            <h3>Lorem ipsum</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+          </div>
+          <aside>
+            <img src={landscape2} alt='image' />
+            <p>{curso2.text}</p>
+          </aside>
+        </>
+      )
+    );
+  };
+
+  const showCurso3 = () => {
+    return (
+      curso === 3 && (
+        <>
+          <div>
+            <h2>300+</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            <h2>300+</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            <h3>Lorem ipsum</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+          </div>
+          <aside>
+            <img src={landscape1} alt='image' />
+            <p>{curso3.text}</p>
+          </aside>
+        </>
+      )
+    );
+  };
+
+  const showCurso4 = () => {
+    return (
+      curso === 4 && (
+        <>
+          <div>
+            <h2>400+</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            <h2>400+</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            <h3>Lorem ipsum</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+          </div>
+          <aside>
+            <img src={landscape3} alt='image' />
+            <p>{curso4.text}</p>
+          </aside>
+        </>
+      )
+    );
+  };
 
   return (
     <Main>
-      <h1>Cursos</h1>
       <Section>
-        <Ul>
-          <li
-            className={curso === 1 ? 'active' : ''}
-            onClick={() => setCurso(1)}
-          >
-            Graduação
-          </li>
-          <li
-            className={curso === 2 ? 'active' : ''}
-            onClick={() => setCurso(2)}
-          >
-            Pós-graduação
-          </li>
-        </Ul>
-
-        <aside>
-          {curso === 1 && (
-            <UL2>
-              <Curso onClick={() => setShowSobre('sobre1')}>
-                {curso1.text}
-              </Curso>
-              {showSobre === 'sobre1' && <P>{curso1.sobre}</P>}
-              <Curso onClick={() => setShowSobre('sobre2')}>
-                {curso2.text}
-              </Curso>
-              {showSobre === 'sobre2' && <P>{curso2.sobre}</P>}
-              <Curso onClick={() => setShowSobre('sobre3')}>
-                {curso3.text}
-              </Curso>
-              {showSobre === 'sobre3' && <P>{curso3.sobre}</P>}
-            </UL2>
-          )}
-          {curso === 2 && (
-            <UL2>
-              <Curso onClick={() => setShowSobre('sobre4')}>
-                {curso4.text}
-              </Curso>
-              {showSobre === 'sobre4' && <P>{curso4.sobre}</P>}
-            </UL2>
-          )}
-        </aside>
+        <h2>Cursos</h2>
+        <h1>Excelência no ensino superior</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur.
+        </p>
+        <button>Contacte a instituição</button>
       </Section>
+
+      <Section2>
+        {showCurso1 && showCurso1()}
+        {showCurso2 && showCurso2()}
+        {showCurso3 && showCurso3()}
+        {showCurso4 && showCurso4()}
+      </Section2>
+
+      <Nav>
+        <p className={curso === 1 ? 'active' : ''} onClick={() => setCurso(1)}>
+          {curso1.text}
+        </p>
+        <p className={curso === 2 ? 'active' : ''} onClick={() => setCurso(2)}>
+          {curso2.text}
+        </p>
+        <p className={curso === 3 ? 'active' : ''} onClick={() => setCurso(3)}>
+          {curso3.text}
+        </p>
+        <p className={curso === 4 ? 'active' : ''} onClick={() => setCurso(4)}>
+          {curso4.text}
+        </p>
+      </Nav>
     </Main>
   );
 };

@@ -1,11 +1,10 @@
-import styled from "styled-components";
-
+import styled from 'styled-components';
 
 const EventsWrapper = styled.div`
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   max-width: 120rem;
-  margin-bottom:2.25rem;
+  margin-bottom: 2.25rem;
   justify-content: center;
   align-items: center;
 `;
@@ -13,7 +12,7 @@ const EventsHeader = styled.div`
   display: flex;
   width: 100%;
   height: 5rem;
- 
+
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
@@ -21,7 +20,6 @@ const EventsHeader = styled.div`
     font-size: 2rem;
     max-width: 98rem;
     //margin: 0 auto;
-
   }
 `;
 const EventsFooter = styled.div`
@@ -35,42 +33,38 @@ const EventsFooter = styled.div`
 const SectionWrapper = styled.section`
   display: flex;
   position: relative;
-  background-color:#F7F9F9;
-  
+  background-color: #f7f9f9;
+
   width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 `;
 
-
-const EventsContent=styled.div`
-  justify-content:center;
+const EventsContent = styled.div`
+  justify-content: center;
   align-items: center;
   //padding-top:1rem;
-  padding-bottom:5rem;
-  width:100%;
-  height:680px;
+  padding-bottom: 5rem;
+  width: 100%;
+  height: 680px;
   overflow: auto;
-  
-  display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
 
-  padding-left:2rem;
- padding-right:2rem;
-   
- 
-`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+
+  padding-left: 2rem;
+  padding-right: 2rem;
+`;
 
 export {
   EventsContent,
   EventsWrapper,
   EventsHeader,
   SectionWrapper,
-  EventsFooter 
-
-}
+  EventsFooter,
+};
 
 /*
 
