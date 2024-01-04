@@ -4,6 +4,7 @@ import landscape2 from '../../../assets/landscapeTwo.jpg';
 import landscape3 from '../../../assets/landscapeThree.jpg';
 
 import { Main, Nav, Section, Section2 } from './cursosStyles';
+import { Link } from 'react-router-dom';
 
 const curso1 = {
   text: 'Licenciatura em Ciências da Computação',
@@ -45,8 +46,10 @@ const Cursos: React.FC = () => {
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
           </div>
           <aside>
-            <img src={landscape1} alt='image' />
-            <p>{curso1.text}</p>
+            <Link to='/curso'>
+              <img src={landscape1} alt='image' />
+              <p>{curso1.text}</p>
+            </Link>
           </aside>
         </>
       )
@@ -66,8 +69,10 @@ const Cursos: React.FC = () => {
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
           </div>
           <aside>
-            <img src={landscape2} alt='image' />
-            <p>{curso2.text}</p>
+            <Link to='/curso'>
+              <img src={landscape2} alt='image' />
+              <p>{curso2.text}</p>
+            </Link>
           </aside>
         </>
       )
@@ -87,8 +92,10 @@ const Cursos: React.FC = () => {
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
           </div>
           <aside>
-            <img src={landscape1} alt='image' />
-            <p>{curso3.text}</p>
+            <Link to='/curso'>
+              <img src={landscape1} alt='image' />
+              <p>{curso3.text}</p>
+            </Link>
           </aside>
         </>
       )
@@ -108,8 +115,10 @@ const Cursos: React.FC = () => {
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
           </div>
           <aside>
-            <img src={landscape3} alt='image' />
-            <p>{curso4.text}</p>
+            <Link to='/curso'>
+              <img src={landscape3} alt='image' />
+              <p>{curso4.text}</p>
+            </Link>
           </aside>
         </>
       )
