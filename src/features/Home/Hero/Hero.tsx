@@ -13,10 +13,12 @@ const Hero: React.FC = () => {
           <div
             key={index}
             style={{
-              backgroundImage: `url(${image})`,
+              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url(${image})`,
               transform: `translateX(${100 * (index - currentImageIndex)}%)`,
             }}
-          ></div>
+          >
+            {/* <h1>Hello world</h1> */}
+          </div>
         ))}
       </Section>
     </main>
